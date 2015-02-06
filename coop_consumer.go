@@ -8,6 +8,7 @@ import (
     "time"
     "fmt"
     "strconv"
+    _ "github.com/lib/pq"
 )
 
 

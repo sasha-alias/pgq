@@ -5,6 +5,7 @@ import (
     "database/sql"
     "time"
     "fmt"
+    _ "github.com/lib/pq"
 )
 
 type Consumer struct{
