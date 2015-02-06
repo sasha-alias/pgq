@@ -265,7 +265,7 @@ type Subconsumer struct{
     }
 
 
-    // Closes the current batch and gets the next one
+    // Get next batch
     func (self *Subconsumer) nextBatch() ([]Event, error) {
 
         // get new batch

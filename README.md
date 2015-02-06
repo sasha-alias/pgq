@@ -5,14 +5,16 @@ Package for writing PGQ consumers in Golang.
 There are two types of consumers you can create:
 
 - pgq.Consumer - a single instance consumer
-- pgq.CoopConsumer - a cooperative consumer, running several subconsumers in goroutins
+- pgq.CoopConsumer - a cooperative consumer, running several subconsumers in goroutines
 
 In order to implement own event or batch processing you have to define the following interfaces:
 
 ```go
-func MyEventHandler(event pgq.Event) error
-func MyBatchHandler(event []pgq.Event) error
+func MyEventHandler(event pgq.Event) error {}
+func MyBatchHandler(event []pgq.Event) error {}
 ```
+
+Then create an instance of appropriate consumer and pass your function to it via _EventHandler_ or _BatchHandler_ methods.
 
 ## Consumer
 
