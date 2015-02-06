@@ -2,6 +2,12 @@
 
 Package for writing PGQ consumers in Golang.
 
+## Installation
+
+    go get github.com/sasha-alias/pgq
+
+## Description
+
 There are two types of consumers you can create:
 
 - pgq.Consumer - a single instance consumer
@@ -23,7 +29,7 @@ Then create an instance of appropriate consumer and pass your function to it via
 package main
 
 import (
-    "pgq"
+    "github.com/sasha-alias/pgq"
     "log"
 )
 
@@ -48,7 +54,7 @@ func main() {
 package main
 
 import (
-    "pgq"
+    "github.com/sasha-alias/pgq"
     "log"
 )
 
