@@ -261,6 +261,7 @@ type Subconsumer struct{
             if close_err != nil {
                 return close_err
             }
+            time.Sleep(self.sleepInterval)
         }
         return nil
     }
