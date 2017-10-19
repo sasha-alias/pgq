@@ -40,8 +40,8 @@ func NewConsumer(consumer_name string, queue_name string, connect_string string)
     consumer.queueName = queue_name
     consumer.connectString = connect_string
     consumer.init()
-    consumer.Subscribe()
-    return consumer, nil
+	err := consumer.Subscribe()
+ 	return consumer, err
 }
 
 func NewCoopConsumer(consumer_name string, count int, queue_name string, connect_string string) (IConsumer, error) {
